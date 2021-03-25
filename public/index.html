@@ -30,6 +30,17 @@
       console.log(payload.admin);
     });
 
+    cliente.on('nuevo_mensaje', function (payload) {
+      console.log('Escuchando');
+      console.log('Nombre: ', payload.nombre);
+      console.log('Mensaje: ', payload.mensaje);
+    });
+
+    cliente.on('active_bands', function (bands) {
+      console.clear();
+      console.table(bands);
+    })
+
   </script>
 
   <button> Tap </button>
